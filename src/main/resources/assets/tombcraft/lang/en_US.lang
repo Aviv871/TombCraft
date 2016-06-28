@@ -1,0 +1,32 @@
+### Creative Tab
+itemGroup.tombcraft=TombCraft
+
+### Items
+item.pureSoul.name=Pure Soul
+item.scrollofForgottenKnowledge.name=Scroll of Forgotten Knowledge
+item.soul.name=Soul
+item.theTouchofDeath.name=The Touch of Death
+#Tools
+item.soulSword.name=Soul Sword
+item.soulPickaxe.name=Soul Pickaxe
+item.soulAxe.name=Soul Axe
+item.soulHoe.name=Soul Hoe
+item.soulShovel.name=Soul Shovel
+
+### Blocks
+tile.tombRelic.name=Tomb Relic
+tile.tombRiser.name=Tomb Riser
+tile.swordCore.name=Sword Core
+tile.hoeCore.name=Hoe Core
+tile.pickaxeCore.name=Pickaxe Core
+tile.axeCore.name=Axe Core
+tile.shovelCore.name=Shovel Core
+#Relic Lab
+tile.oven.name=Relic Lab
+tile.ovenActive.name=Relic Lab
+container.oven=Relic Lab
+
+### Keys
+keys.tombcraft.category=TombCraft
+keys.tombcraft.charge=Charge
+keys.tombcraft.releace=Releace

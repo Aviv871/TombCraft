@@ -1,0 +1,17 @@
+[
+{
+  "modid": "tombcraft",
+  "name": "TombCraft",
+  "description": "It`s a mod...",
+  "version": "0.1",
+  "credits": "Created by Aviv871 and yolp900",
+  "logoFile": "",
+  "mcversion": "1.9.4",
+  "url": "",
+  "updateUrl": "",
+  "authors": [ "Aviv871" ],
+  "parent":"",
+  "screenshots": [],
+  "dependencies": []
+}
+]
