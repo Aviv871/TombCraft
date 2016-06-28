@@ -1,6 +1,21 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "tombcraft:blocks/ovenTop"
-    }
+        "top": "tombcraft:blocks/ovenTop",
+        "side": "tombcraft:blocks/ovenSide",
+        "front": "tombcraft:blocks/ovenOff"
+    },
+    "elements": [
+        { "from": [0, 0, 0],
+            "to": [16, 16, 16],
+            "faces": {
+                "down": {"texture": "#top" },
+                "up": {"texture": "#top" },
+                "north": {"texture": "#front" },
+                "south": {"texture": "#side" },
+                "west": {"texture": "#side" },
+                "east": {"texture": "#side" }
+            }
+        }
+    ]
 }

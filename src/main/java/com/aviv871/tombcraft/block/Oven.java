@@ -111,7 +111,7 @@ public class Oven extends BlockContainer
     } */
 
 
-    public static void updateOvenBlockState(boolean active, World worldObj, int xCoord, int yCoord, int zCoord)
+    /*public static void updateOvenBlockState(boolean active, World worldObj, int xCoord, int yCoord, int zCoord) //TODO: REWRITE
     {
         //int i = worldObj.getBlockMetadata(xCoord, yCoord, zCoord);
 
@@ -136,5 +136,5 @@ public class Oven extends BlockContainer
             tileEntity.validate();
             worldObj.setTileEntity(new BlockPos(xCoord, yCoord, zCoord), tileEntity);
         }
-    }
+    } */
 }

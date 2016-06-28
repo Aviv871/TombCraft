@@ -1,6 +1,20 @@
 {
     "parent": "block/cube_all",
     "textures": {
-        "all": "tombcraft:blocks/shovelCore"
+        "top": "tombcraft:blocks/shovelCore",
+        "other": "tombcraft:blocks/tombRelic"
+    },
+    "elements": [
+    { "from": [0, 0, 0],
+      "to": [16, 16, 16],
+      "faces": {
+        "down": {"texture": "#other" },
+        "up": {"texture": "#top" },
+        "north": {"texture": "#other" },
+        "south": {"texture": "#other" },
+        "west": {"texture": "#other" },
+        "east": {"texture": "#other" }
+      }
     }
+  ]
 }

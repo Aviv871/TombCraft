@@ -191,7 +191,7 @@ public class TileEntityOven extends TileEntity implements ISidedInventory, ITick
             if(flag != this.isBurning())
             {
                 flag1 = true;
-                Oven.updateOvenBlockState(this.isBurning(), this.worldObj, this.getPos().getX(), this.getPos().getY(), this.getPos().getZ());
+                //Oven.updateOvenBlockState(this.isBurning(), this.worldObj, this.getPos().getX(), this.getPos().getY(), this.getPos().getZ()); //ERROR
             }
         }
 
