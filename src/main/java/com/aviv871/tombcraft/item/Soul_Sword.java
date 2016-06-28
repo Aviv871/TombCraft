@@ -28,6 +28,7 @@ public class Soul_Sword extends ItemSword
 
     public boolean hitEntity(ItemStack itemStack, EntityLivingBase target, EntityLivingBase attacker)
     {
+        target.addPotionEffect(new PotionEffect(TombCraft.potionTC, 200, 1)); 
         return true;
     }
 
