@@ -38,7 +38,7 @@ public class Soul_Pickaxe extends ItemPickaxe
         {
             if (!player.capabilities.isCreativeMode)
             {
-                SoulsData.decreesSouls(player, 1);
+                SoulsData.decreaseSouls(player, 1);
             }
 
             world.setBlockToAir(pos);

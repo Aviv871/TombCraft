@@ -22,17 +22,17 @@ public class TCLivingDropsEvent
             {
                 if (event.getEntity() instanceof EntityAnimal)
                 {
-                    SoulsData.increesSouls((EntityPlayer) (event.getSource().getEntity()), 1);
+                    SoulsData.increaseSouls((EntityPlayer) (event.getSource().getEntity()), 1);
                 }
                 else if (event.getEntity() instanceof EntityPlayer)
                 {
                     int playerSouls = SoulsData.getSouls((EntityPlayer)event.getEntity());
                     SoulsData.setSouls((EntityPlayer)event.getEntity(), 0);
-                    SoulsData.increesSouls((EntityPlayer)(event.getSource().getEntity()), playerSouls);
+                    SoulsData.increaseSouls((EntityPlayer)(event.getSource().getEntity()), playerSouls);
                 }
                 else
                 {
-                    SoulsData.increesSouls((EntityPlayer) (event.getSource().getEntity()), 2);
+                    SoulsData.increaseSouls((EntityPlayer) (event.getSource().getEntity()), 2);
                 }
             }
 

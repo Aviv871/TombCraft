@@ -20,8 +20,8 @@ public class ModBlocks
     public static BlockTombCraft hoeCore = new Hoe_Core(Blocks.HOE_CORE, Material.IRON, 1.0f, 1.0f);
     public static BlockTombCraft shovelCore = new Shovel_Core(Blocks.SHOVEL_CORE, Material.IRON, 1.0f, 1.0f);
 
-    public static Block ovenIdle = new Oven(Blocks.OVEN_IDLE, Material.IRON, 1.0f, 1.0f, false);
-    public static Block ovenActive = new Oven(Blocks.OVEN_ACTIVE, Material.IRON, 1.0f, 1.0f, true);
+    public static BlockTombCraft ovenIdle = new Oven(Blocks.OVEN_IDLE, Material.IRON, 1.0f, 1.0f, false);
+    public static BlockTombCraft ovenActive = new Oven(Blocks.OVEN_ACTIVE, Material.IRON, 1.0f, 1.0f, true);
 
     public static void register()
     {

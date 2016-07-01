@@ -22,14 +22,14 @@ public class SoulsData
         entityPlayer.getEntityData().setInteger(SOULS_DATA_ID, souls);
     }
 
-    public static void increesSouls(EntityPlayer entityPlayer, int amount)
+    public static void increaseSouls(EntityPlayer entityPlayer, int amount)
     {
         int currentSouls = getSouls(entityPlayer);
         currentSouls += amount;
         setSouls(entityPlayer, currentSouls);
     }
 
-    public static void decreesSouls(EntityPlayer entityPlayer, int amount)
+    public static void decreaseSouls(EntityPlayer entityPlayer, int amount)
     {
         int currentSouls = getSouls(entityPlayer);
         currentSouls -= amount;

@@ -1,12 +1,9 @@
 package com.aviv871.tombcraft.block;
 
 import com.aviv871.tombcraft.TombCraft;
-import com.aviv871.tombcraft.init.ModBlocks;
 import com.aviv871.tombcraft.reference.Blocks;
 import com.aviv871.tombcraft.reference.GuiId;
 import com.aviv871.tombcraft.tileentity.TileEntityOven;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockContainer;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -22,7 +19,7 @@ import net.minecraftforge.fml.common.network.internal.FMLNetworkHandler;
 
 import javax.annotation.Nullable;
 
-public class Oven extends Block implements ITileEntityProvider
+public class Oven extends BlockTombCraft implements ITileEntityProvider
 {
     private final boolean isActive;
 
@@ -30,12 +27,7 @@ public class Oven extends Block implements ITileEntityProvider
 
     public Oven(Blocks block, Material material, float hardness, float resistance, boolean isActive)
     {
-        super(material);
-        this.setCreativeTab(TombCraft.tabTombCraft);
-        this.setRegistryName(block.getRegistryName());
-        this.setUnlocalizedName(block.getUnlocalizedName());
-        this.setHardness(hardness);
-        this.setResistance(resistance);
+        super(block, material, hardness, resistance);
 
         this.isActive = isActive;
     }
