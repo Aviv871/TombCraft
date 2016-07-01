@@ -17,10 +17,10 @@ public enum Blocks
     private String unlocalizedName;
     private ResourceLocation registryName;
 
-    Blocks(String unlocalizedName)
+    Blocks(String pureName)
     {
-        this.unlocalizedName = unlocalizedName;
-        this.registryName = new ResourceLocation(Reference.MOD_ID, unlocalizedName);
+        this.unlocalizedName = Reference.MOD_PREFIX + pureName;
+        this.registryName = new ResourceLocation(Reference.MOD_ID, pureName);
     }
 
     public ResourceLocation getRegistryName()

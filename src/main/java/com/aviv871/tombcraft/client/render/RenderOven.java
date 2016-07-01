@@ -38,7 +38,6 @@ public class RenderOven extends TileEntitySpecialRenderer<TileEntityOven>
             double local = (period * (System.currentTimeMillis() & 0x3FFFL) / 0x3FFFL);
             float hoverHeight = (float) ((0.4 * (Math.sin(local))) / 8);
 
-            LogHelper.info(hoverHeight);
             GlStateManager.translate(0.5F, 2F + hoverHeight, 0.5F);
             EntityItem entityitem = new EntityItem(world, 0.0D, 0.0D, 0.0D, itemStack);
             entityitem.getEntityItem().stackSize = 1;

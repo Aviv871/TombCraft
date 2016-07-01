@@ -17,10 +17,10 @@ public enum Items
     private String unlocalizedName;
     private ResourceLocation registryName;
 
-    Items(String theUnlocalizedName)
+    Items(String pureName)
     {
-        this.unlocalizedName = theUnlocalizedName;
-        this.registryName = new ResourceLocation(Reference.MOD_ID, theUnlocalizedName);
+        this.unlocalizedName = Reference.MOD_PREFIX + pureName;
+        this.registryName = new ResourceLocation(Reference.MOD_ID, pureName);
     }
 
     public ResourceLocation getRegistryName()
