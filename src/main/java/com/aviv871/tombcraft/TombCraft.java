@@ -70,7 +70,7 @@ public class TombCraft
         MinecraftForge.EVENT_BUS.register(new KeyInputEventHandler());
         potionTC = (new PotionTC(false, 32)).setIconIndex(0, 0).setPotionName("potion.potionTC");
 
-        //ModHooks.register(); //TODO: Rewrite
+        ModHooks.register();
 
         proxy.registerRecipes();
         proxy.registerTileEntities();
