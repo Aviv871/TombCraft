@@ -3,7 +3,8 @@
     "textures": {
         "top": "tombcraft:blocks/ovenTop",
         "side": "tombcraft:blocks/ovenSide",
-        "front": "tombcraft:blocks/ovenOff"
+        "front": "tombcraft:blocks/ovenOff",
+        "particle": "tombcraft:blocks/ovenTop"
     },
     "elements": [
         { "from": [0, 0, 0],

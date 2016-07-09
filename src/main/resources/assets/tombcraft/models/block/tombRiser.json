@@ -3,7 +3,8 @@
     "textures": {
         "top": "tombcraft:blocks/tombRiserUp",
         "bottom": "tombcraft:blocks/tombRiserDown",
-        "side": "tombcraft:blocks/tombRiserSide"
+        "side": "tombcraft:blocks/tombRiserSide",
+        "particle": "tombcraft:blocks/tombRiserUp"
     },
     "elements": [
         { "from": [0, 0, 0],

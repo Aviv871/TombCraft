@@ -15,7 +15,14 @@ public class ServerProxy extends CommonProxy
     }
 
     @Override
-    public void registerGuiHandler() {
+    public void registerGuiHandler()
+    {
+        //Not Relevant
+    }
+
+    @Override
+    public void openGuiScreen()
+    {
         //Not Relevant
     }
 }

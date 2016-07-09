@@ -23,4 +23,6 @@ public interface IProxy
     public abstract void registerWorldGenerator();
 
     public abstract void registerConfiguration(File file);
+
+    public abstract void openGuiScreen();
 }

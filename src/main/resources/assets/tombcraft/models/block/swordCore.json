@@ -2,7 +2,8 @@
     "parent": "block/cube_all",
     "textures": {
         "top": "tombcraft:blocks/swordCore",
-        "other": "tombcraft:blocks/tombRelic"
+        "other": "tombcraft:blocks/tombRelic",
+        "particle": "tombcraft:blocks/tombRelic"
     },
     "elements": [
         { "from": [0, 0, 0],
