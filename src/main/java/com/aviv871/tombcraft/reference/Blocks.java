@@ -12,7 +12,9 @@ public enum Blocks
     SHOVEL_CORE("shovelCore"),
     SWORD_CORE("swordCore"),
     TOMB_RELIC("tombRelic"),
-    TOMB_RISER("tombRiser");
+    TOMB_RISER("tombRiser"),
+    EDGE("edge"),
+    HANDY_MAN("handyMan");
 
     private String unlocalizedName;
     private ResourceLocation registryName;

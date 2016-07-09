@@ -23,6 +23,8 @@ public class BlockRenderRegister
         registerRender(ModBlocks.swordCore);
         registerRender(ModBlocks.tombRelic);
         registerRender(ModBlocks.tombRiser);
+        registerRender(ModBlocks.handyMan);
+        registerRender(ModBlocks.edge);
     }
 
     private static void registerRender(Block block)

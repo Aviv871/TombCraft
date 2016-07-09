@@ -1,0 +1,13 @@
+{
+    "__comment": "Model file for three adjacent connected sides in a T shape (rotated per state, default connected on the 'up/east/west' facing)",
+	"parent": "block/cube",
+    "textures": {
+		"particle": "tombcraft:blocks/edge/edge0C",
+        "down": "tombcraft:blocks/edge/edge2C_we",
+		"up": "tombcraft:blocks/edge/edge4C",
+		"north": "tombcraft:blocks/edge/edge3C_uwe",
+		"south": "tombcraft:blocks/edge/edge3C_uwe",
+		"west": "tombcraft:blocks/edge/edge4C",
+		"east": "tombcraft:blocks/edge/edge4C"
+    }
+}

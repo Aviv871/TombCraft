@@ -23,6 +23,9 @@ public class ModBlocks
     public static BlockTombCraft ovenIdle = new Oven(Blocks.OVEN_IDLE, Material.IRON, 1.0f, 1.0f, false);
     public static BlockTombCraft ovenActive = new Oven(Blocks.OVEN_ACTIVE, Material.IRON, 1.0f, 1.0f, true);
 
+    public static BlockTombCraft handyMan = new Handy_Man(Blocks.HANDY_MAN, Material.SAND, 1.0f, 1.0f);
+    public static BlockTombCraft edge = new Edge(Blocks.EDGE, Material.IRON, 1.0f, 1.0f);
+
     public static void register()
     {
         registerBlock(tombRelic);
@@ -36,6 +39,9 @@ public class ModBlocks
 
         registerBlock(ovenIdle);
         registerBlock(ovenActive);
+
+        registerBlock(handyMan);
+        registerBlock(edge);
     }
 
     private static void registerBlock(Block block)

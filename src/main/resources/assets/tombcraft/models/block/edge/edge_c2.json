@@ -1,0 +1,13 @@
+{
+    "__comment": "Model file for two connected sides (rotated per state, default connected on the 'up/down' facing)",
+	"parent": "block/cube",
+    "textures": {
+		"particle": "tombcraft:blocks/edge/edge0C",
+        "down": "tombcraft:blocks/edge/edge4C",
+		"up": "tombcraft:blocks/edge/edge4C",
+		"north": "tombcraft:blocks/edge/edge2C_ud",
+		"south": "tombcraft:blocks/edge/edge2C_ud",
+		"west": "tombcraft:blocks/edge/edge2C_ud",
+		"east": "tombcraft:blocks/edge/edge2C_ud"
+    }
+}
