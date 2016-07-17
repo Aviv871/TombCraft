@@ -2,7 +2,7 @@ package com.aviv871.tombcraft.client.gui;
 
 import com.aviv871.tombcraft.inventory.ContainerTombRiser;
 import com.aviv871.tombcraft.reference.Reference;
-import com.aviv871.tombcraft.tileentity.TombRiserTileEntity;
+import com.aviv871.tombcraft.tileentity.TileEntityTombRiser;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
@@ -12,9 +12,9 @@ public class GuiTombRiser extends GuiContainer
 {
     private static final ResourceLocation backgroundimage = new ResourceLocation(Reference.MOD_ID.toLowerCase() + ":" + "textures/gui/tombRiserGui.png");
 
-    TombRiserTileEntity tombRiser;
+    TileEntityTombRiser tombRiser;
 
-    public GuiTombRiser(InventoryPlayer inventoryPlayer, TombRiserTileEntity entity)
+    public GuiTombRiser(InventoryPlayer inventoryPlayer, TileEntityTombRiser entity)
     {
         super(new ContainerTombRiser(inventoryPlayer, entity));
 

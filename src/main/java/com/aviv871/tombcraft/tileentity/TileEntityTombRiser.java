@@ -10,7 +10,7 @@ import net.minecraft.util.text.ITextComponent;
 import javax.annotation.Nullable;
 
 
-public class TombRiserTileEntity extends TileEntity implements IInventory
+public class TileEntityTombRiser extends TileEntity implements IInventory
 {
     @Override
     public int getSizeInventory() {

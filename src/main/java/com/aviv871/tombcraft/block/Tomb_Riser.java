@@ -3,7 +3,7 @@ package com.aviv871.tombcraft.block;
 import com.aviv871.tombcraft.TombCraft;
 import com.aviv871.tombcraft.reference.Blocks;
 import com.aviv871.tombcraft.reference.GuiId;
-import com.aviv871.tombcraft.tileentity.TombRiserTileEntity;
+import com.aviv871.tombcraft.tileentity.TileEntityTombRiser;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -28,7 +28,7 @@ public class Tomb_Riser extends BlockTombCraft implements ITileEntityProvider
     @Override
     public TileEntity createNewTileEntity(World world, int meta)
     {
-        return new TombRiserTileEntity();
+        return new TileEntityTombRiser();
     }
 
     @Override

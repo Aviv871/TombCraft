@@ -6,7 +6,7 @@ import com.aviv871.tombcraft.inventory.ContainerRelicLab;
 import com.aviv871.tombcraft.inventory.ContainerTombRiser;
 import com.aviv871.tombcraft.reference.GuiId;
 import com.aviv871.tombcraft.tileentity.TileEntityRelicLab;
-import com.aviv871.tombcraft.tileentity.TombRiserTileEntity;
+import com.aviv871.tombcraft.tileentity.TileEntityTombRiser;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
@@ -25,9 +25,9 @@ public class GuiHandler implements IGuiHandler
         {
             if (id == GuiId.TOMB_RISER.ordinal())
             {
-                if (entity instanceof TombRiserTileEntity)
+                if (entity instanceof TileEntityTombRiser)
                 {
-                    return new ContainerTombRiser(entityPlayer.inventory, (TombRiserTileEntity) entity);
+                    return new ContainerTombRiser(entityPlayer.inventory, (TileEntityTombRiser) entity);
                 }
             }
 
@@ -53,9 +53,9 @@ public class GuiHandler implements IGuiHandler
         {
             if (id == GuiId.TOMB_RISER.ordinal())
             {
-                if (entity instanceof TombRiserTileEntity)
+                if (entity instanceof TileEntityTombRiser)
                 {
-                    return new GuiTombRiser(entityPlayer.inventory, (TombRiserTileEntity) entity);
+                    return new GuiTombRiser(entityPlayer.inventory, (TileEntityTombRiser) entity);
                 }
             }
 

@@ -1,6 +1,6 @@
 package com.aviv871.tombcraft.inventory;
 
-import com.aviv871.tombcraft.tileentity.TombRiserTileEntity;
+import com.aviv871.tombcraft.tileentity.TileEntityTombRiser;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -8,11 +8,11 @@ import net.minecraft.inventory.Slot;
 
 public class ContainerTombRiser extends Container
 {
-    private TombRiserTileEntity tombRiserTileEntity;
+    private TileEntityTombRiser tileEntityTombRiser;
 
-    public ContainerTombRiser(InventoryPlayer inventory, TombRiserTileEntity tombRiserTileEntity)
+    public ContainerTombRiser(InventoryPlayer inventory, TileEntityTombRiser tileEntityTombRiser)
     {
-        this.tombRiserTileEntity = tombRiserTileEntity;
+        this.tileEntityTombRiser = tileEntityTombRiser;
         bindPlayerInventory(inventory);
     }
 
@@ -42,8 +42,8 @@ public class ContainerTombRiser extends Container
             }
         }
 
-        addSlotToContainer(new SoltTombRiser(this.tombRiserTileEntity, id2, 36, 58)); //Adds input
-        addSlotToContainer(new SoltTombRiser(this.tombRiserTileEntity, id2, 123, 58)); //Adds output
+        addSlotToContainer(new SoltTombRiser(this.tileEntityTombRiser, id2, 36, 58)); //Adds input
+        addSlotToContainer(new SoltTombRiser(this.tileEntityTombRiser, id2, 123, 58)); //Adds output
     }
 
     @Override
