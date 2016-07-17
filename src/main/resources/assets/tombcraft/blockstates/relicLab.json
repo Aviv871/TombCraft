@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "state=false": { "model": "tombcraft:relicLab" },
+        "state=true": { "model": "tombcraft:relicLabActive" }
+    }
+}

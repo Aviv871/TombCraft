@@ -1,7 +1,6 @@
 package com.aviv871.tombcraft.client.render;
 
-import com.aviv871.tombcraft.tileentity.TileEntityOven;
-import com.aviv871.tombcraft.utility.LogHelper;
+import com.aviv871.tombcraft.tileentity.TileEntityRelicLab;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
@@ -13,13 +12,13 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class RenderOven extends TileEntitySpecialRenderer<TileEntityOven>
+public class RenderRelicLab extends TileEntitySpecialRenderer<TileEntityRelicLab>
 {
     private static Minecraft minecraft = Minecraft.getMinecraft();
     private static final double period = 24 * Math.PI;
 
     @Override
-    public void renderTileEntityAt(TileEntityOven te, double x, double y, double z, float partialTicks, int destroyStage)
+    public void renderTileEntityAt(TileEntityRelicLab te, double x, double y, double z, float partialTicks, int destroyStage)
     {
         ItemStack itemStack = ItemStack.copyItemStack(te.getStackInSlot(0));
 

@@ -1,6 +1,7 @@
 {
 	"variants": {
 		"down=false,east=false,north=false,south=false,up=false,west=false": { "model": "tombcraft:edge/edge_c0" },
+        "down=false,east=false,north=false,south=false,up=false,west=false": { "model": "tombcraft:edge/edge_c5-6" },
 
 		"down=false,east=false,north=false,south=false,up=true,west=false": { "model": "tombcraft:edge/edge_c1" },
 		"down=true,east=false,north=false,south=false,up=false,west=false": { "model": "tombcraft:edge/edge_c1", "x": 180 },

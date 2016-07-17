@@ -1,6 +1,6 @@
 package com.aviv871.tombcraft.tileentity;
 
-import com.aviv871.tombcraft.block.Oven;
+import com.aviv871.tombcraft.block.Relic_Lab;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -12,6 +12,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
+import net.minecraft.network.NetworkManager;
+import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
@@ -20,7 +22,10 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class TileEntityOven extends TileEntity implements ISidedInventory, ITickable
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
+public class TileEntityRelicLab extends TileEntity implements ISidedInventory, ITickable
 {
     private String localizedName;
 
@@ -46,7 +51,7 @@ public class TileEntityOven extends TileEntity implements ISidedInventory, ITick
 
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.localizedName : "container.oven";
+        return this.hasCustomInventoryName() ? this.localizedName : "container.relicLab";
     }
 
     public boolean hasCustomInventoryName()
@@ -191,7 +196,8 @@ public class TileEntityOven extends TileEntity implements ISidedInventory, ITick
             if(flag != this.isBurning())
             {
                 flag1 = true;
-                //Oven.updateOvenBlockState(this.isBurning(), this.worldObj, this.getPos().getX(), this.getPos().getY(), this.getPos().getZ()); //ERROR
+                //Relic_Lab.updateOvenBlockState(this.isBurning(), this.worldObj, this.getPos().getX(), this.getPos().getY(), this.getPos().getZ()); //ERROR
+                Relic_Lab.setState(this.isBurning() ,this.worldObj, this.getPos());
             }
         }
 
@@ -415,5 +421,26 @@ public class TileEntityOven extends TileEntity implements ISidedInventory, ITick
     @Override
     public ITextComponent getDisplayName() {
         return new TextComponentString(this.localizedName);
+    }
+
+    @Override
+    @Nonnull
+    public NBTTagCompound getUpdateTag() {
+        NBTTagCompound tag = new NBTTagCompound();
+
+        this.writeToNBT(tag);
+        return tag;
+    }
+
+    @Override
+    @Nullable
+    public SPacketUpdateTileEntity getUpdatePacket() {
+        return new SPacketUpdateTileEntity(this.pos, 0, getUpdateTag());
+    }
+
+    @Override
+    public void onDataPacket(NetworkManager net, SPacketUpdateTileEntity pkt) {
+        NBTTagCompound tag = pkt.getNbtCompound();
+        this.readFromNBT(tag);
     }
 }

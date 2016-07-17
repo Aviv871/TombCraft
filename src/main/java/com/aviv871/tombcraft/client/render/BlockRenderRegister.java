@@ -16,13 +16,13 @@ public class BlockRenderRegister
     {
         registerRender(ModBlocks.axeCore);
         registerRender(ModBlocks.hoeCore);
-        registerRender(ModBlocks.ovenActive);
-        registerRender(ModBlocks.ovenIdle);
+        registerRender(ModBlocks.relicLab);
         registerRender(ModBlocks.pickaxeCore);
         registerRender(ModBlocks.shovelCore);
         registerRender(ModBlocks.swordCore);
         registerRender(ModBlocks.tombRelic);
         registerRender(ModBlocks.tombRiser);
+        registerRender(ModBlocks.ghostSeat);
         registerRender(ModBlocks.handyMan);
         registerRender(ModBlocks.edge);
     }

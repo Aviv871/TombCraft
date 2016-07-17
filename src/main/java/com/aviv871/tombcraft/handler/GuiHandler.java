@@ -1,11 +1,11 @@
 package com.aviv871.tombcraft.handler;
 
-import com.aviv871.tombcraft.client.gui.GuiOven;
+import com.aviv871.tombcraft.client.gui.GuiRelicLab;
 import com.aviv871.tombcraft.client.gui.GuiTombRiser;
-import com.aviv871.tombcraft.inventory.ContainerOven;
+import com.aviv871.tombcraft.inventory.ContainerRelicLab;
 import com.aviv871.tombcraft.inventory.ContainerTombRiser;
 import com.aviv871.tombcraft.reference.GuiId;
-import com.aviv871.tombcraft.tileentity.TileEntityOven;
+import com.aviv871.tombcraft.tileentity.TileEntityRelicLab;
 import com.aviv871.tombcraft.tileentity.TombRiserTileEntity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
@@ -31,11 +31,11 @@ public class GuiHandler implements IGuiHandler
                 }
             }
 
-            if(id == GuiId.OVEN.ordinal())
+            if(id == GuiId.RELIC_LAB.ordinal())
             {
-                if (entity instanceof TileEntityOven)
+                if (entity instanceof TileEntityRelicLab)
                 {
-                    return new ContainerOven(entityPlayer.inventory, (TileEntityOven) entity);
+                    return new ContainerRelicLab(entityPlayer.inventory, (TileEntityRelicLab) entity);
                 }
                 return null;
             }
@@ -59,11 +59,11 @@ public class GuiHandler implements IGuiHandler
                 }
             }
 
-            if(id == GuiId.OVEN.ordinal())
+            if(id == GuiId.RELIC_LAB.ordinal())
             {
-                if (entity instanceof TileEntityOven)
+                if (entity instanceof TileEntityRelicLab)
                 {
-                    return new GuiOven(entityPlayer.inventory, (TileEntityOven) entity);
+                    return new GuiRelicLab(entityPlayer.inventory, (TileEntityRelicLab) entity);
                 }
                 return null;
             }

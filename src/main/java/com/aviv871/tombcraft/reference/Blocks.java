@@ -4,8 +4,7 @@ import net.minecraft.util.ResourceLocation;
 
 public enum Blocks
 {
-    OVEN_IDLE("oven"),
-    OVEN_ACTIVE("ovenActive"),
+    RELIC_LAB("relicLab"),
     AXE_CORE("axeCore"),
     HOE_CORE("hoeCore"),
     PICKAXE_CORE("pickaxeCore"),
@@ -14,6 +13,7 @@ public enum Blocks
     TOMB_RELIC("tombRelic"),
     TOMB_RISER("tombRiser"),
     EDGE("edge"),
+    GHOST_SEAT("ghostSeat"),
     HANDY_MAN("handyMan");
 
     private String unlocalizedName;

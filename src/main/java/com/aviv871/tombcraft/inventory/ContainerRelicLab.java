@@ -1,6 +1,6 @@
 package com.aviv871.tombcraft.inventory;
 
-import com.aviv871.tombcraft.tileentity.TileEntityOven;
+import com.aviv871.tombcraft.tileentity.TileEntityRelicLab;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
@@ -13,25 +13,25 @@ import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class ContainerOven extends Container
+public class ContainerRelicLab extends Container
 {
-    private TileEntityOven oven;
+    private TileEntityRelicLab relicLab;
 
     public int lastBurnTime;
     public int lastCurrectItemBurnTime;
     public int lastCookTime;
 
-    public ContainerOven(InventoryPlayer inventory, TileEntityOven tileEntityOven)
+    public ContainerRelicLab(InventoryPlayer inventory, TileEntityRelicLab tileEntityRelicLab)
     {
-        this.oven = tileEntityOven;
-        registerSlots(inventory, tileEntityOven);
+        this.relicLab = tileEntityRelicLab;
+        registerSlots(inventory, tileEntityRelicLab);
     }
 
-    private void registerSlots(InventoryPlayer inventory, TileEntityOven tileEntityOven)
+    private void registerSlots(InventoryPlayer inventory, TileEntityRelicLab tileEntityRelicLab)
     {
-        this.addSlotToContainer(new Slot(tileEntityOven, 0, 56, 35));
-        this.addSlotToContainer(new Slot(tileEntityOven, 1, 22, 35));
-        this.addSlotToContainer(new SlotFurnaceOutput(inventory.player, tileEntityOven, 2, 116, 35));
+        this.addSlotToContainer(new Slot(tileEntityRelicLab, 0, 56, 35));
+        this.addSlotToContainer(new Slot(tileEntityRelicLab, 1, 22, 35));
+        this.addSlotToContainer(new SlotFurnaceOutput(inventory.player, tileEntityRelicLab, 2, 116, 35));
 
         for(int i = 0; i < 3; i++)
         {
@@ -50,9 +50,9 @@ public class ContainerOven extends Container
     public void addCraftingToCrafters (IContainerListener listener)
     {
         super.addListener(listener);
-        listener.sendProgressBarUpdate(this, 0, this.oven.cookTime);
-        listener.sendProgressBarUpdate(this, 1, this.oven.burnTime);
-        listener.sendProgressBarUpdate(this, 2, this.oven.currectItemBurnTime);
+        listener.sendProgressBarUpdate(this, 0, this.relicLab.cookTime);
+        listener.sendProgressBarUpdate(this, 1, this.relicLab.burnTime);
+        listener.sendProgressBarUpdate(this, 2, this.relicLab.currectItemBurnTime);
     }
 
     public void detectAndSendChanges()
@@ -62,40 +62,40 @@ public class ContainerOven extends Container
         {
             IContainerListener listener = (IContainerListener)this.listeners.get(i);
 
-            if(this.lastCookTime != this.oven.cookTime)
+            if(this.lastCookTime != this.relicLab.cookTime)
             {
-                listener.sendProgressBarUpdate(this, 0, this.oven.cookTime);
+                listener.sendProgressBarUpdate(this, 0, this.relicLab.cookTime);
             }
 
-            if(this.lastBurnTime != this.oven.burnTime)
+            if(this.lastBurnTime != this.relicLab.burnTime)
             {
-                listener.sendProgressBarUpdate(this, 1, this.oven.burnTime);
+                listener.sendProgressBarUpdate(this, 1, this.relicLab.burnTime);
             }
 
-            if(this.lastCurrectItemBurnTime != this.oven.currectItemBurnTime)
+            if(this.lastCurrectItemBurnTime != this.relicLab.currectItemBurnTime)
             {
-                listener.sendProgressBarUpdate(this, 2, this.oven.currectItemBurnTime);
+                listener.sendProgressBarUpdate(this, 2, this.relicLab.currectItemBurnTime);
             }
         }
 
-        this.lastCookTime = this.oven.cookTime;
-        this.lastBurnTime = this.oven.burnTime;
-        this.lastCurrectItemBurnTime = this.oven.currectItemBurnTime;
+        this.lastCookTime = this.relicLab.cookTime;
+        this.lastBurnTime = this.relicLab.burnTime;
+        this.lastCurrectItemBurnTime = this.relicLab.currectItemBurnTime;
     }
 
     @SideOnly(Side.CLIENT)
     public void updateProgressBar(int slot, int newValue)
     {
         if (slot == 0) {
-            this.oven.cookTime = newValue;
+            this.relicLab.cookTime = newValue;
         }
 
         if (slot == 1) {
-            this.oven.burnTime = newValue;
+            this.relicLab.burnTime = newValue;
         }
 
         if (slot == 2) {
-            this.oven.currectItemBurnTime = newValue;
+            this.relicLab.currectItemBurnTime = newValue;
         }
     }
 

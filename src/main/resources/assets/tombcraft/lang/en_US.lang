@@ -21,12 +21,12 @@ tile.tombcraft.hoeCore.name=Hoe Core
 tile.tombcraft.pickaxeCore.name=Pickaxe Core
 tile.tombcraft.axeCore.name=Axe Core
 tile.tombcraft.shovelCore.name=Shovel Core
+tile.tombcraft.ghostSeat.name=Ghost Seat
 tile.tombcraft.handyMan.name=Handy Man
 tile.tombcraft.edge.name=Edge
 #Relic Lab
-tile.tombcraft.oven.name=Relic Lab
-tile.tombcraft.ovenActive.name=Relic Lab
-container.oven=Relic Lab
+tile.tombcraft.relicLab.name=Relic Lab
+container.relicLab=Relic Lab
 
 ### Keys
 keys.tombcraft.category=TombCraft

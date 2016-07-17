@@ -3,11 +3,13 @@ package com.aviv871.tombcraft.proxy;
 import com.aviv871.tombcraft.TombCraft;
 import com.aviv871.tombcraft.client.gui.GuiTheTouchofDeath;
 import com.aviv871.tombcraft.client.render.BlockRenderRegister;
+import com.aviv871.tombcraft.client.render.GhostSeatTESR;
 import com.aviv871.tombcraft.client.render.ItemRenderRegister;
-import com.aviv871.tombcraft.client.render.RenderOven;
+import com.aviv871.tombcraft.client.render.RenderRelicLab;
 import com.aviv871.tombcraft.client.settings.KeyBindings;
 import com.aviv871.tombcraft.handler.GuiHandler;
-import com.aviv871.tombcraft.tileentity.TileEntityOven;
+import com.aviv871.tombcraft.tileentity.TileEntityGhostSeat;
+import com.aviv871.tombcraft.tileentity.TileEntityRelicLab;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
@@ -19,7 +21,9 @@ public class ClientProxy extends CommonProxy
     {
         ItemRenderRegister.registerItemRenderer();
         BlockRenderRegister.registerItemBlockRenderer();
-        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityOven.class, new RenderOven());
+
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityRelicLab.class, new RenderRelicLab());
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityGhostSeat.class, new GhostSeatTESR());
     }
 
     @Override

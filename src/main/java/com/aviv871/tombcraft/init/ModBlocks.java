@@ -20,10 +20,10 @@ public class ModBlocks
     public static BlockTombCraft hoeCore = new Hoe_Core(Blocks.HOE_CORE, Material.IRON, 1.0f, 1.0f);
     public static BlockTombCraft shovelCore = new Shovel_Core(Blocks.SHOVEL_CORE, Material.IRON, 1.0f, 1.0f);
 
-    public static BlockTombCraft ovenIdle = new Oven(Blocks.OVEN_IDLE, Material.IRON, 1.0f, 1.0f, false);
-    public static BlockTombCraft ovenActive = new Oven(Blocks.OVEN_ACTIVE, Material.IRON, 1.0f, 1.0f, true);
+    public static BlockTombCraft relicLab = new Relic_Lab(Blocks.RELIC_LAB, Material.IRON, 1.0f, 1.0f);
 
-    public static BlockTombCraft handyMan = new Handy_Man(Blocks.HANDY_MAN, Material.SAND, 1.0f, 1.0f);
+    public static BlockTombCraft ghostSeat = new Ghost_Seat(Blocks.GHOST_SEAT, Material.GLASS, 1.0f, 1.0f);
+    public static BlockTombCraft handyMan = new Handy_Man(Blocks.HANDY_MAN, Material.GLASS, 1.0f, 1.0f);
     public static BlockTombCraft edge = new Edge(Blocks.EDGE, Material.IRON, 1.0f, 1.0f);
 
     public static void register()
@@ -37,9 +37,9 @@ public class ModBlocks
         registerBlock(hoeCore);
         registerBlock(shovelCore);
 
-        registerBlock(ovenIdle);
-        registerBlock(ovenActive);
+        registerBlock(relicLab);
 
+        registerBlock(ghostSeat);
         registerBlock(handyMan);
         registerBlock(edge);
     }
